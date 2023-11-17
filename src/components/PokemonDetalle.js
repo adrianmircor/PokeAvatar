@@ -49,7 +49,7 @@ const ContenedorInfo = styled.div`
   margin: 0;
 `;
 
-const PokemonDescrip = () => {
+const PokemonDetalle = () => {
 
     const { url, name } = useContext(pokemonContext);
     const [pokemon, setPokemon] = useState({
@@ -146,4 +146,4 @@ const PokemonDescrip = () => {
     );
 };
 
-export default PokemonDescrip;
+export default PokemonDetalle;

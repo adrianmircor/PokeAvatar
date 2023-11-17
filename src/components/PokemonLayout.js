@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useContext } from 'react';
 
 import Pokemon from './Pokemon';
@@ -51,7 +50,7 @@ const ContenedorBotones = styled.div`
   padding: 15px;
 `;
 
-const LayoutPokemones = () => {
+const PokemonLayout = () => {
 
     const [pokemones, setPokemones] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -80,25 +79,19 @@ const LayoutPokemones = () => {
     };
 
     const handleLink = (_movimiento) => {
-        console.log('[handleLink] index', index);
         let cantidadPaginacion = 0;
         if (_movimiento == "siguiente") {
-            console.log('SIGUIENTE');
             cantidadPaginacion = index + 20;
             movimientoIndex(cantidadPaginacion)
-            console.log('[handleLink] index', index);
-        } else {
-            console.log('ANTERIOR');
+        } else if (_movimiento == "anterior") {
             cantidadPaginacion = index - 20;
             movimientoIndex(cantidadPaginacion)
         }
-        console.log('[handleLink] cantidadPaginacion', cantidadPaginacion);
     };
 
     return (
         <ContenedorPrincipal>
             <H2>POKEMON - AVATAR</H2>
-
             {loading === true ? (
                 <>
                     <ContenedorLayout>
@@ -129,4 +122,4 @@ const LayoutPokemones = () => {
     )
 }
 
-export default LayoutPokemones;
+export default PokemonLayout;

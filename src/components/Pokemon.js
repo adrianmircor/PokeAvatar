@@ -14,9 +14,9 @@ const Pokemon = ({ pokemon }) => {
 
     const { capturarUrlPokemon, capturarNamePokemon } = useContext(pokemonContext);
 
-    const handleLink = (pokemon) => {
-        capturarUrlPokemon(pokemon.url);
-        capturarNamePokemon(pokemon.name);
+    const handleLink = (_pokemon) => {
+        capturarUrlPokemon(_pokemon.url);
+        capturarNamePokemon(_pokemon.name);
     };
 
     return (
