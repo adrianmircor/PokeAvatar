@@ -1,0 +1,3 @@
+export const URL_POKEMON = "URL_POKEMON";
+export const NAME_POKEMON = "NAME_POKEMON";
+export const MOVIMIENTO_INDEX = "MOVIMIENTO_INDEX";
