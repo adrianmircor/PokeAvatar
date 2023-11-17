@@ -101,8 +101,6 @@ const PokemonDetalle = () => {
                         imagen = res.data["sprites"]["front_default"];
                         peso = res.data["weight"];
                         tamano = res.data["height"];
-                        console.log(peso)
-                        console.log(tamano)
                         setPokemon({ ...pokemon, imagen, genero, descripcion, peso, tamano })
                         setLoading(true);
                     })
